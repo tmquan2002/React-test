@@ -17,6 +17,11 @@ li a {
   text-decoration: none;
 }
 
+li a:hover {
+  background-color: white;
+  color: black;
+}
+
 .active {
   background-color: #c2b506;
 }
@@ -25,7 +30,7 @@ li a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: flex-start;  
+  align-items: flex-start;
 }
 
 .column {
