@@ -45,6 +45,7 @@ h3, .title, .detail, button {
 
 .detail {
   background-color: black;
+  margin: 0;
 }
 
 button {
