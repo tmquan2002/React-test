@@ -3,6 +3,14 @@ import { PlayerList } from '../shared/ListOfPlayers'
 import { useState } from 'react'
 export default function Players() {
     const [player, setPlayer] = useState([])
+    const [popup, setPopup] = useState(false);
+
+    if (popup) {
+        document.getElementById("popup1").className = "overlay";
+    } else {
+        document.getElementById("popup1").className = "hide-pop-up";
+    }
+
     return (
         <div>
             <div className='container'>
@@ -12,20 +20,18 @@ export default function Players() {
                             <img src={player.img} alt='' />
                             <h3>{player.name}</h3>
                             <p className='title'></p>
-                            <p className='detail'>
-                                <button onClick={() => { setPlayer(player) }}>
-                                    <a href='#popup1' id='openPopUp'>Detail</a>
-                                </button>
-                            </p>
+                            <button className='detail' onClick={() => { setPlayer(player); setPopup(!popup); }}>
+                                <a href='#popup1' id='openPopUp'>Detail</a>
+                            </button>
                         </div>
                     </div>
                 ))}
             </div>
-            <div id='popup1' className='overlay'>
+            <div id='popup1'>
                 <div className='popup'>
-                    <img src={player.img} />
+                    <img src={player.img} alt="A popup" />
                     <h2>{player.name}</h2>
-                    <a className='close' href='#'>&times;</a>
+                    <a className='close' href='#close' onClick={() => { setPopup(!popup); }}>x</a>
                     <div className='content'>
                         {player.info}
                     </div>
@@ -34,4 +40,3 @@ export default function Players() {
         </div>
     )
 }
-
