@@ -1,10 +1,11 @@
 import React from 'react'
 import { PlayerList } from '../shared/ListOfPlayers'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { ThemeContext } from './ThemeContext'
 export default function Players() {
     const [player, setPlayer] = useState([])
     const [popup, setPopup] = useState(false);
-
+    const { theme } = useContext(ThemeContext)
     var element = document.getElementById("popup1");
     console.log(element);
     if (popup) {
@@ -12,12 +13,12 @@ export default function Players() {
             element.className = "overlay";
     } else {
         if (element !== null)
-            element.getElementById("popup1").className = "hide-pop-up";
+            element.className = "hide-pop-up";
     }
 
     return (
         <div>
-            <div className='container'>
+            <div className='container' id={theme.containerID}>
                 {PlayerList.map((player) => (
                     <div className='column' key={player.id}>
                         <div className='card'>

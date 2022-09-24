@@ -143,3 +143,23 @@ footer {
   color: white;
   text-align: center;
 }
+
+#dark {
+  color: white;
+  background-color: black;
+}
+
+#dark .card {
+  color: white;
+  background-color: black;
+}
+
+#light {
+  color: black;
+  background-color: white;
+}
+
+#light .card {
+  color: black;
+  background-color: white;
+}
