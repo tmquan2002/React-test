@@ -5,10 +5,14 @@ export default function Players() {
     const [player, setPlayer] = useState([])
     const [popup, setPopup] = useState(false);
 
+    var element = document.getElementById("popup1");
+    console.log(element);
     if (popup) {
-        document.getElementById("popup1").className = "overlay";
+        if (element !== null)
+            element.className = "overlay";
     } else {
-        document.getElementById("popup1").className = "hide-pop-up";
+        if (element !== null)
+            element.getElementById("popup1").className = "hide-pop-up";
     }
 
     return (
