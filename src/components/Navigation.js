@@ -1,13 +1,15 @@
 import React from 'react'
 export default function Navigation() {
     return (
-        <nav className="navbar navbar-dark bg-dark fixed-top">
-            <div className="container-fluid">
-                <a className='active navbar-brand' href='#home'>Home</a>
-                <a class="navbar-brand" href='#news'>News</a>
-                <a class="navbar-brand" href='#about'>About</a>
-                <a class="navbar-brand" href='#contact'>Contact</a>
-            </div>
-        </nav>
+        <header>
+            <nav className="navbar">
+                <ul>
+                    <li><a className='active' href='#home'>Home</a></li>
+                    <li><a href='#news'>News</a></li>
+                    <li><a href='#about'>About</a></li>
+                    <li><a href='#contact'>Contact</a></li>
+                </ul>
+            </nav>
+        </header>
     )
 }

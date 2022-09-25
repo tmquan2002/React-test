@@ -1,57 +1,63 @@
-nav {
-  height: 50px;
-  background-color: black;
-  padding: 0;
-}
-
 .navbar {
-  height: 60px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 3px 1px rgba(0, 0, 0, 0.12), 0px 1px 5px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+  background-color: white;
 }
 
-.navbar-brand {
-  padding: 10px;
+ul {
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
 }
 
-a:hover {
-  background-color: rgb(115, 115, 115);
+li {
+  float: left;
 }
 
-.container-fluid {
-  width: 70%;
+.switch-mode {
+  float: right;
+}
+
+a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;  
+  color: black;
+}
+
+li a:hover:not(.active) {
+  background-color: #83838374;    
+  color: black;
 }
 
 .active {
   background-color: #b8ff86;
-  color: black;
 }
 
-.container {
+.film-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
-  margin-top: 70px;
-  margin-bottom: 35px;
+  margin-bottom: 31px;
+  padding-top: 70px;
 }
 
-.film-column {
-  background-color: #e4e4e4;
-  margin: 20px 0;
-  box-shadow: 5px 10px 8px #000000bf;
+.card {
+  height: auto;
 }
 
-h2, h3, .detail, button {
+h4, h3 {
   text-align: center;
   font-size: large;
 }
 
-h2 {
-  color: #51733a;
-}
-
-button {
-  background-color: black;
-  color: white;
+h4 {
+  padding-bottom: 10px;
 }
 
 img {
@@ -59,12 +65,27 @@ img {
   height: 750px;
 }
 
+button {
+  cursor: pointer;
+}
+
+button.film-column {
+  box-shadow: 5px 10px 8px #000000bf;
+  margin-bottom: 20px;
+  border: none;
+  transition: all 0.5s ease-in-out;
+}
+
+button.film-column:hover {
+  transform: scale(1.1, 1.1);
+}
+
 footer {
   position: fixed;
   width: 100%;
   bottom: 0;
-  background-color: #c2b506;
+  background-color: #b8ff86;
   padding: 5px 0;
-  color: white;
+  color: black;
   text-align: center;
 }
