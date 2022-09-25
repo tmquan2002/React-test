@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
-import { PlayerList } from '../shared/ListOfPlayers'
-import Players from './Players';
+import { FilmList } from '../shared/ListOfFilms'
+import Films from './Films';
 export class Main extends Component {
     constructor() {
         super();
         this.state = {
-            players: PlayerList
+            players: FilmList
         };
     }
     render() {
-        return <Players players={this.state.players} />
+        return <Films films={this.state.films} />
     }
 }
 export default Main

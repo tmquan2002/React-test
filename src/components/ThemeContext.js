@@ -2,12 +2,14 @@ import React from 'react'
 import { useState,  useEffect } from 'react'
 const themes = {
   dark: {
-    backgroundColor: 'black',
-    color: 'white'
+    backgroundColor: '#202020',
+    color: 'white',
+    containerID: 'dark'
   },
   light: {
     backgroundColor: 'white',
-    color: 'black'
+    color: '#181818',
+    containerID: 'light'
   }
 }
 const initialState = {
