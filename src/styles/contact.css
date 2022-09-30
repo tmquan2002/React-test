@@ -1,0 +1,25 @@
+.contact-container {
+    background-image: url('../../public/assets/images/BG2.png');
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 150px 0;
+}
+
+.contact-title {
+    font-size: 100px;
+}
+
+.contact-image {
+    box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.14), 0px 5px 22px rgba(0, 0, 0, 0.12), 0px 7px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 50px;
+    height: auto;
+}
+
+.contact-info {
+    margin: 10px;
+    font-size: 20px;
+}

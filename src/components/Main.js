@@ -1,15 +1,18 @@
 import React, { Component } from 'react'
-import { PlayerList } from '../shared/ListOfPlayers'
-import Players from './Players';
+import { FilmList } from '../shared/ListOfFilms'
+import Films from './Films';
+import { Outlet } from 'react-router-dom'
+
 export class Main extends Component {
     constructor() {
         super();
         this.state = {
-            players: PlayerList
+            films: FilmList
         };
     }
     render() {
-        return <Players players={this.state.players} />
+        return <><Films films={this.state.films} />
+            <Outlet /></>
     }
 }
 export default Main

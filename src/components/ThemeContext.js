@@ -2,7 +2,7 @@ import React from 'react'
 import { useState,  useEffect } from 'react'
 const themes = {
   dark: {
-    backgroundColor: '#202020',
+    backgroundColor: '#212529',
     color: 'white',
     containerID: 'dark'
   },
