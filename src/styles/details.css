@@ -1,24 +1,58 @@
 .film-detail-container {
     background-image: url('../../public/assets/images/BG.png');
+    background-size: cover;
     position: absolute;
-    top: 0;
+    top: 64px;
     bottom: 0;
     left: 0;
     right: 0;
     padding: 150px 0;
 }
 
+.detail-card {
+    width: 1050px;
+}
+
+.detail-badge {
+    font-size: 250%;
+}
+
 .img-detail {
     width: 400px;
-    height: auto;    
+    height: 600px;
+    box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.14), 0px 5px 22px rgba(0, 0, 0, 0.12), 0px 7px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.detail-info {
+    margin-top: 21%;
+    height: 360px;
+    padding: 10px 30px;
     box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.14), 0px 5px 22px rgba(0, 0, 0, 0.12), 0px 7px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
 
-.detail-info {
-    padding: 10px 30px;
-    box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.14), 0px 5px 22px rgba(0, 0, 0, 0.12), 0px 7px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+@media only screen and (max-width: 1200px) {
+    .film-detail-container {
+        padding: 50px 0;
+        height: fit-content;
+    }
+
+    .detail-card {
+        width: 500px;
+    }
+
+    .img-detail {
+        display: block;
+        width: 500px;
+        height: auto;
+    }
+
+    .detail-info {
+        width: 510px;
+        margin-top: 10%;
+    }
 }
 
 .product-price {
@@ -31,4 +65,10 @@
 .film-detail-info {
     text-align: justify;
     font-size: larger;
+}
+
+.btn-floating {
+    position: absolute;
+    margin-right: 1000px;
+    transform: scale(2);
 }

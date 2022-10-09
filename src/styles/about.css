@@ -1,0 +1,14 @@
+.about-container {
+    background-image: url('../../public/assets/images/About.png');
+    background-size: cover;
+    position: absolute;
+    top: 64px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 200px 0;
+}
+
+.collapsible, .collapsible-header, .collapsible-body {
+    border-color: rgba(138, 138, 138, 0.089)
+}

@@ -6,23 +6,18 @@
   transition: all 0.5s ease-in-out;
 }
 
-.active {
-  background-color: #7cad59;
-  color: black;
+#mobile-nav-dark {
+  background-color: #212529;
+}
+
+#mobile-nav-light {
+  background-color: white;
 }
 
 .film-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
+  text-align: center;
   margin-bottom: 31px;
   padding-top: 70px;
-}
-
-.card {
-  width: 500px;
-  height: auto;
 }
 
 h4, h3 {
@@ -36,7 +31,14 @@ h4 {
 
 img {
   width: 500px;
-  height: 750px;
+  height: 700px;
+}
+
+@media only screen and (max-width: 1650px) {
+  img {
+    width: 350px;
+    height: 500px;
+  }
 }
 
 button {
@@ -46,6 +48,7 @@ button {
 button.film-column {
   box-shadow: 5px 10px 8px #000000bf;
   margin-bottom: 20px;
+  padding: 1% 2%;
   border: none;
   transition: all 0.5s ease-in-out;
 }
@@ -66,7 +69,38 @@ button.close {
   font-size: 20px;
 }
 
-.overlay {
+.contact-title {
+  margin: 0;
+  padding-top: 1%;
+}
+
+.modal-show {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  background-color: #00000086;
+  z-index: 99;
+}
+
+.modal .modal-content {
+  overflow: visible;
+}
+
+.modal-close {
+  color: black;
+  background-color: #8fc866;
+}
+
+.modal-close:hover {
+  color: black;
+  background-color: #8fc866be;
+}
+
+/* .overlay {
   width: 100vw;
   height: 100vh;
   top: 0;
@@ -74,7 +108,7 @@ button.close {
   bottom: 0;
   right: 0;
   position: fixed;
-  background: rgba(49, 49, 49, 0.8); 
+  background: rgba(49, 49, 49, 0.8);
 }
 
 .hide {
@@ -114,9 +148,15 @@ button.close {
 
 .popup .content .info {
   text-align: justify;
+} */
+
+@media only screen and (max-width: 992px) {
+  i.left {
+    margin-top: 12px;
+  }
 }
 
-@media only screen and (max-width: 1500px) {
+/* @media only screen and (max-width: 1500px) {
   .popup {
     margin-top: 70px;
     padding: 0;
@@ -136,7 +176,7 @@ button.close {
     margin: 2px;
     padding: 10px 0px;
   }
-}
+} */
 
 footer {
   position: fixed;
@@ -156,6 +196,16 @@ footer {
 #dark .film-column {
   color: white;
   background-color: #2e2e2e;
+}
+
+#dark .collapsible-header {
+  color: white;
+  background-color: #181818;
+}
+
+#light .collapsible-header {
+  color: black;
+  background-color: #f9f9f9cc;
 }
 
 #light {

@@ -2,14 +2,16 @@ import React from 'react'
 import { useState,  useEffect } from 'react'
 const themes = {
   dark: {
-    backgroundColor: '#212529',
+    backgroundColor: '#2f353b',
     color: 'white',
-    containerID: 'dark'
+    containerID: 'dark',
+    mobileID: 'mobile-nav-dark'
   },
   light: {
     backgroundColor: 'white',
     color: '#181818',
-    containerID: 'light'
+    containerID: 'light',
+    mobileID: 'mobile-nav-light'
   }
 }
 const initialState = {
