@@ -1,14 +1,15 @@
 import '../styles/news.css'
+import { NewList } from '../shared/ListOfNews'
 import { ThemeContext } from './ThemeContext'
 import { useContext } from 'react'
-import { Col, Row } from 'react-materialize'
+import { Card, CardTitle, Col, Row } from 'react-materialize'
 
 export default function News() {
     const { theme } = useContext(ThemeContext)
     return (
         <div id={theme.containerID} className='news-container'>
-            <Row style={{ width: '50%' }}>
-                <Col s={12} className='main-news-container'>
+            <Row style={{ width: '80%' }}>
+                <Col s={12} xl={8} className='main-news-container'>
                     <h2 style={{ textAlign: 'justify' }}>The childhood Mario franchise has released first official movie trailer: "The Super Mario Bros. Movie"</h2>
                     <div>10th August, 2022 | 9:00 PM GMT+7</div>
                     <iframe style={{ alignItems: 'center' }} width="100%" height="500px" src="https://www.youtube.com/embed/LLIn2HB7ud0" title="YouTube video player" frameborder="0"
@@ -24,6 +25,17 @@ export default function News() {
                     <iframe style={{ alignItems: 'center' }} width="100%" height="500px" src="https://www.youtube.com/embed/xe-K518aWOg" title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <p style={{ textAlign: 'justify', fontSize: '18px' }}>The Mario movie will be hitting theaters in North America on April 7, 2023, unless it slips again.</p>
+                </Col>
+                <Col s={12} xl={4} style={{ paddingTop: '3.5%' }}>
+                    <div style={{ textAlign: 'justify', fontSize: '170%' }}>More news</div>
+                    {NewList.map((news) => (
+                        <Card
+                            header={<CardTitle image={news.img} />}
+                            style={{ backgroundColor: theme.backgroundColor }}
+                        >
+                            {news.title}
+                        </Card>
+                    ))}
                 </Col>
             </Row>
         </div >

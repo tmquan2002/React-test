@@ -18,7 +18,7 @@ export default function Films() {
                         {/* <button className='film-column' onClick={() => { setFilm(film); setPopup('overlay') }}> */}
                         <button className='film-column' style={{ backgroundColor: theme.backgroundColor }}>
                             <div style={{ backgroundColor: theme.backgroundColor }}>
-                                <img src={film.img} alt='' />
+                                <img className='home-img' src={film.img} alt='' />
                                 <h3 style={{ fontSize: '20px' }}>{film.title} ({film.year})</h3>
                             </div>
                         </button>

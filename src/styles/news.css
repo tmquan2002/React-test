@@ -1,9 +1,21 @@
 .news-container {
+    background-size: cover;
     position: absolute;
     top: 64px;
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 30px 0;
-    height: 2100px;
+    padding: 2% 0;
+    height: fit-content;
+}
+
+.main-news-container {
+    border-right: dashed 1px rgb(138, 138, 138);
+}
+
+@media only screen and (max-width: 1200px) {
+    .main-news-container {
+        border-right: none;
+        border-bottom: dashed 1px rgb(138, 138, 138);
+    }
 }
