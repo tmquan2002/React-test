@@ -27,7 +27,7 @@ export default function News() {
                     <p style={{ textAlign: 'justify', fontSize: '18px' }}>The Mario movie will be hitting theaters in North America on April 7, 2023, unless it slips again.</p>
                 </Col>
                 <Col s={12} xl={4} style={{ paddingTop: '3.5%' }}>
-                    <div style={{ textAlign: 'justify', fontSize: '170%' }}>More news</div>
+                    <div style={{ textAlign: 'justify', fontSize: '170%' }}>MORE NEWS</div>
                     {NewList.map((news) => (
                         <Card
                             header={<CardTitle image={news.img} />}

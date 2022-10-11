@@ -21,7 +21,7 @@ export default function Contact() {
                     <TextInput icon={<Icon left>email</Icon>} email id="TextInput-38" label="Email" validate />
                     <Textarea icon={<Icon left>mode_edit</Icon>} number id="TextArea-38" label="Any good films to share with us" validate />
                     <Textarea icon={<Icon left>question_answer</Icon>} number id="TextArea-38" label="Some feedbacks to improve our website" validate />
-                    <Button style={{ backgroundColor: '#b8ff86', color: 'black', width: '10%' }}>Submit</Button>
+                    <Button style={{ backgroundColor: '#b8ff86', color: 'black', width: 'fit-content' }}>Submit</Button>
                 </form>
                 <Row >
                     <Col s={4} className='contact-info'>
